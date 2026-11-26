@@ -1,4 +1,4 @@
--- Seed data for a clean AutoFlow demo database. Safe to apply more than once.
+
 INSERT INTO customers(customer_id,full_name,email,phone,license_number,joined_on) VALUES
 (1,'Aarav Sharma','aarav.sharma@example.in','+91 98765 43210','DL-0420110012345','2025-02-12'),
 (2,'Priya Mehta','priya.mehta@example.in','+91 98201 56789','MH-0320130098765','2025-04-03'),

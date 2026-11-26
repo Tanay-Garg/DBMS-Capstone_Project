@@ -1,4 +1,4 @@
--- One-time update of the initial demo rows for the Indian market.
+
 BEGIN;
 
 UPDATE customers SET full_name='Aarav Sharma', email='aarav.sharma@example.in', phone='+91 98765 43210', license_number='DL-0420110012345' WHERE customer_id=1;

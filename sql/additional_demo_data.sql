@@ -1,6 +1,3 @@
--- 50 additional fictional but realistic Indian-market demo records.
--- IDs follow the initial seed set. This batch is installed once by server.py.
-
 INSERT INTO customers(customer_id,full_name,email,phone,license_number,joined_on) VALUES
 (10,'Meera Joshi','meera.joshi@example.com','+91 90000 10010','MH-1420200010010','2025-12-02'),
 (11,'Kabir Malhotra','kabir.malhotra@example.com','+91 90000 10011','DL-0320190010011','2025-12-16'),

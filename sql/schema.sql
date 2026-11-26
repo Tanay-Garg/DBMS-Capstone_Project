@@ -1,5 +1,4 @@
--- AutoFlow relational schema for PostgreSQL 14+.
--- Entities are separated by responsibility; foreign keys preserve their relationships.
+
 
 CREATE TABLE IF NOT EXISTS app_migrations (
   migration_key TEXT PRIMARY KEY,
