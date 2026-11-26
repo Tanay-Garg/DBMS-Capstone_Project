@@ -48,6 +48,8 @@ def initialize():
     """Apply idempotent schema and seed demo rows to the configured database."""
     db = connect()
     try:
+        # Serialize cold-start migrations when multiple Vercel functions start together.
+        db.execute("SELECT pg_advisory_xact_lock(hashtext('autoflow_schema_init'))")
         db.execute((ROOT / "sql" / "schema.sql").read_text(encoding="utf-8"), prepare=False)
         if db.execute("SELECT 1 FROM customers LIMIT 1").fetchone() is None:
             db.execute((ROOT / "sql" / "seed.sql").read_text(encoding="utf-8"), prepare=False)
